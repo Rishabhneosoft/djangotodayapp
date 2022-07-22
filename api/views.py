@@ -9,6 +9,8 @@ class PlanList(ListAPIView):
 class PlanCreate(CreateAPIView):
     queryset = Plan.objects.all()
     serializer_class = PlanSerializer
+
 class PlanDestroy(DestroyAPIView):
     queryset = Plan.objects.all()
     serializer_class = PlanSerializer
+    lookup_field = 'id'
